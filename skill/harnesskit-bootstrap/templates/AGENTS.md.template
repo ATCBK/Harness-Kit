@@ -1,0 +1,7 @@
+﻿# {{PROJECT_NAME}} Agent 规则
+
+- 项目类型：{{PROJECT_TYPE}}
+- 允许修改区域：{{AGENT_ALLOWED_AREAS}}
+- 禁止修改区域：{{AGENT_FORBIDDEN_AREAS}}
+- 开发前必读：AGENTS.md、product-origin、project-profile、feature-list
+- 开发后必做：更新 progress、session-handoff、verification

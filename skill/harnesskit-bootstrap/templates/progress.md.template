@@ -1,0 +1,5 @@
+﻿# 进度状态
+
+- 当前进度：{{CURRENT_PROGRESS}}
+- 下一步：{{NEXT_STEP}}
+- 阻塞：TODO

@@ -1,0 +1,5 @@
+﻿# {{PROJECT_NAME}} 的 Claude 说明
+
+- 优先读取 Harness 核心文件
+- 长上下文时先摘要再执行
+- 会话结束更新 handoff

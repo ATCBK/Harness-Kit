@@ -1,0 +1,6 @@
+﻿# 项目边界
+
+- 当前阶段范围：{{CURRENT_STAGE_SCOPE}}
+- 非目标：{{NON_GOALS}}
+- 可改区域：{{AGENT_ALLOWED_AREAS}}
+- 禁改区域：{{AGENT_FORBIDDEN_AREAS}}
