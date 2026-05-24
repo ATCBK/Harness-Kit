@@ -5,6 +5,7 @@ HarnessKit Bootstrap Skill
 ## 用途
 
 通过 HITL 多轮访谈生成目标项目专属 Harness。
+- 先澄清用户需求，再按骨架引导填写对应文件。
 
 ## 适用场景
 
@@ -39,3 +40,4 @@ HarnessKit Bootstrap Skill
 ## 完成标准
 
 Harness 文件结构完整，可执行，可交接。
+
