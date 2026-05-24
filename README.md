@@ -38,13 +38,10 @@ HarnessKit 提供一套 Markdown-first 的 Harness 工程骨架与参考体系�
 
 ### 2. 骨架化目录与参考样例
 
-提供骨架目录和参考样例，便于按场景快速填充，而不是绑定固定业务模板：
+提供通用骨架目录和参考样例，便于在用户项目中按需填充。
 
-- `minimal-harness`
-- `ai-agent-project`
-- `web-app-project`
-- `backend-project`
-- `hackathon-project`
+- minimal-harness（通用骨架起点）
+- example-harness-minimal（演示参考）
 
 ### 3. 标准化文档闭环
 
@@ -97,11 +94,11 @@ HarnessKit 提供一套 Markdown-first 的 Harness 工程骨架与参考体系�
 
 ### 5 分钟上手
 
-1. 选择骨架（例如 `templates/minimal-harness/` 作为起点）。
-2. 复制到目标项目目录（通常为 `ai/`）。
-3. 按 `workflows/01-08` 完成 HITL 访谈，澄清用户需求后再填充骨架中的 `TODO`。
-4. 开发前必读：`AGENTS.md`、`product-origin.md`、`scope.md`、`feature-list.md`。
-5. 开发后必更：`progress.md`、`verification.md`、`session-handoff.md`。
+1. 将整个 HarnessKit 仓库下载后，迁移到你正在开发的项目中（建议放在项目根目录）。
+2. 在你的项目里启动 AI 助手，使用我们提供的启动提示词（见 `docs/bootstrap-prompt.md`）触发 Harness 搭建流程。
+3. AI 与你进行 HITL 沟通，先澄清目标、范围、约束和验收标准。
+4. AI 按骨架结构将澄清结果写入对应文件，并补齐必要 `TODO`。
+5. 开发前必读：`AGENTS.md`、`product-origin.md`、`scope.md`、`feature-list.md`；开发后必更：`progress.md`、`verification.md`、`session-handoff.md`。
 
 ## 最佳实践
 
@@ -127,8 +124,8 @@ Harness-Kit/
 ├── docs/                         # 概念、原则、指南、路线图
 ├── workflows/                    # 01-08 HITL 访谈流程
 ├── checklists/                   # 启动/开发前后/完整性/防漂移清单
-├── templates/                    # 可复用 Harness 骨架
-├── examples/                     # 示例 Harness（演示用途）
+├── templates/                    # 通用 Harness 骨架（minimal）
+├── examples/                     # 参考样例（minimal）
 ├── skill/harnesskit-bootstrap/   # Bootstrap Skill + 骨架 + 参考资料
 ├── assets/                       # 视觉资源（项目图标等）
 └── AGENTS.md                     # 仓库级维护规则
@@ -151,4 +148,7 @@ Harness-Kit/
 ## 许可证
 
 本项目采用 [MIT License](./LICENSE)。
+
+
+
 

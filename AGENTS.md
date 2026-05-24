@@ -3,8 +3,8 @@
 - 本仓库是 Markdown-first 文档项目。
 - 不添加程序代码，不创建 CLI，不创建 `src/`。
 - 不创建 `package.json`、`tsconfig.json`。
-- 新增内容必须服务于 Harness 启动、HITL、模板、清单或示例。
-- 不把用户项目事实写进通用模板。
+- 新增内容必须服务于 Harness 启动、HITL、骨架、清单或示例。
+- 不把用户项目事实写进通用骨架。
 - 未知信息写 `TODO`。
 - 示例必须包含：`This is an example harness for demonstration only.`
 - 涉及 sub-agent 时必须写明：目标、边界、输入、输出、验收标准。
