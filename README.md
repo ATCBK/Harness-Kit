@@ -2,67 +2,142 @@
 
 ![HarnessKit Icon](./assets/harnesskit-icon.png)
 
-HarnessKit 是一个 Markdown-first 的 Harness 文档库。  
-目标是在编码前先固定：上下文、边界、任务拆解、验证标准、会话交接。
+**HarnessKit · AI 开发项目的 Harness 标准化基座**  
+让每个项目在编码前先对齐边界、目标、验证与交接。
 
-## 这是什么
+## 项目愿景
 
-- 不是代码框架
-- 不是 CLI 工具
-- 不是模板生成器网站
-- 是一套可复用的 Harness 文档、流程、清单、示例
+AI 编码项目常见问题不是“写不出代码”，而是“写了之后不断返工”：上下文缺失、范围漂移、验收模糊、交接断层。  
+HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先对齐再实现”变成可执行流程：从项目原点采集，到范围定义、规则生成、验证设计，再到会话交接与锁定，形成稳定协作闭环。
 
-## 5 分钟快速开始
+## 核心能力
 
-1. 选择一个模板目录（例如 `templates/minimal-harness/`）。
-2. 复制模板到你的目标项目（通常放在项目根目录的 `ai/` 或同级 Harness 目录）。
-3. 按 `workflows/01-08` 做 HITL 访谈，逐步填充 `TODO`。
-4. 开发前先读：`AGENTS.md`、`product-origin.md`、`scope.md`、`feature-list.md`。
+### 1. HITL 分轮启动流程
+
+通过 `workflows/01-08` 将复杂需求拆成可访谈、可确认、可落地的阶段：
+
+- 项目原点采集
+- 范围定义
+- 项目画像捕获
+- Agent 规则生成
+- 功能拆解
+- 验证设计
+- 会话交接
+- Harness 锁定
+
+### 2. 多场景 Harness 模板
+
+内置多种项目模板，支持快速复制并按需填充：
+
+- `minimal-harness`
+- `ai-agent-project`
+- `web-app-project`
+- `backend-project`
+- `hackathon-project`
+
+### 3. 标准化文档闭环
+
+统一的 `ai/*.md` 文档集合覆盖完整开发协作链路：
+
+- `product-origin`：问题来源与背景约束
+- `project-profile`：项目画像与边界信息
+- `scope`：做什么 / 不做什么
+- `feature-list`：功能拆解与优先级
+- `verification`：验收与验证设计
+- `progress`：开发进展与阶段结果
+- `session-handoff`：跨会话交接
+- `risk-register`：风险识别与处置
+- `decision-log`：关键决策记录
+
+### 4. Checklist 驱动质量控制
+
+通过启动前、开发前后、完整性、防漂移清单降低遗漏：
+
+- `harness-startup-checklist`
+- `before-coding-checklist`
+- `after-coding-checklist`
+- `harness-completeness-checklist`
+- `anti-drift-checklist`
+
+### 5. Sub-agent 协作约束（关键）
+
+已内建 sub-agent 规则，确保并行协作不失控：
+
+- 下发任务必须写明：目标、边界、输入、输出、验收标准
+- sub-agent 仅可在授权区域修改，不得越权
+- 多个 sub-agent 不可并发修改同一文件
+- 冲突由主 agent 统一整合与记录
+
+## 产品亮点
+
+- **Markdown-first**：零平台依赖，任意代码仓可落地
+- **模板 + 流程双驱动**：既有可复制资产，也有执行顺序
+- **未知显式化**：所有未知统一标记 `TODO`，避免伪确定性
+- **可审计协作**：决策、风险、验证、交接全链路可追溯
+- **工具中立**：可用于 Codex / Claude Code / Cursor 等环境
+
+## 快速开始
+
+### 环境要求
+
+- 任意 Git 仓库（推荐）
+- 支持 Markdown 的编辑环境
+- 可运行 AI Agent 的开发工作台（如 Codex / Claude Code / Cursor）
+
+### 5 分钟上手
+
+1. 选择模板（例如 `templates/minimal-harness/`）。
+2. 复制到目标项目目录（通常为 `ai/`）。
+3. 按 `workflows/01-08` 完成首轮 HITL 访谈并填充 `TODO`。
+4. 开发前必读：`AGENTS.md`、`product-origin.md`、`scope.md`、`feature-list.md`。
 5. 开发后必更：`progress.md`、`verification.md`、`session-handoff.md`。
-
-## 推荐使用路径（新用户）
-
-1. 先读 `docs/concept.md` 和 `docs/harness-principles.md`，理解 Harness 作用。
-2. 跑一遍 `checklists/harness-startup-checklist.md`，确认启动条件齐全。
-3. 从 `examples/` 选一个最接近你的场景的示例，对照填模板。
-4. 每完成一个功能，立刻补验证与交接，不要堆到最后。
 
 ## 最佳实践
 
-- 小步更新：每轮开发只更新与本轮相关的 Harness 文档。
-- 先范围后实现：`scope.md` 不清楚时，不进入编码阶段。
-- 未知即 `TODO`：不要猜测，不要编造。
-- 验收可执行：每个功能必须有可复现的验证步骤。
-- 交接可落地：`session-handoff.md` 要写清下一步、阻塞点、风险。
-- sub-agent 有边界：任务下发必须写目标、边界、输入、输出、验收标准；禁止并发改同一文件。
+- 先定义边界，再进入实现
+- 每个功能都写验收标准与验证步骤
+- 每轮只更新本轮相关文档，保持小步迭代
+- 不确定信息写 `TODO`，不猜测不编造
+- 每次会话结束都更新 `session-handoff`
+- 使用 sub-agent 前先拆分文件责任，避免编辑冲突
 
 ## 常见误区
 
-- 只复制模板，不填 `TODO`。
-- 只写过程，不写验收标准。
-- 开发后不更新 `progress` 和 `session-handoff`。
-- 在通用模板中写入具体业务事实。
+- 只复制模板，不完成 `TODO`
+- 只写任务描述，不写验收标准
+- 开发后不更新 `progress` 与 `session-handoff`
+- 在通用模板中写入具体项目事实
+- 多个 sub-agent 并发改同一文件
 
-## 仓库结构
+## 项目结构
 
-- `docs/`：概念、原则、流程、指南、路线图
-- `workflows/`：8 个 HITL 访谈流程
-- `checklists/`：启动、开发前后、完整性、防漂移清单
-- `templates/`：可复制 Harness 模板
-- `examples/`：示例 Harness（仅演示）
-- `skill/harnesskit-bootstrap/`：Bootstrap Skill、模板与参考资料
+```text
+Harness-Kit/
+├── docs/                         # 概念、原则、指南、路线图
+├── workflows/                    # 01-08 HITL 访谈流程
+├── checklists/                   # 启动/开发前后/完整性/防漂移清单
+├── templates/                    # 可复制 Harness 模板
+├── examples/                     # 示例 Harness（演示用途）
+├── skill/harnesskit-bootstrap/   # Bootstrap Skill + 模板 + 参考资料
+├── assets/                       # 视觉资源（项目图标等）
+└── AGENTS.md                     # 仓库级维护规则
+```
 
-## 最小执行清单
+## 仓库约束
 
-1. 复制模板并创建项目专属 Harness。
-2. 完成 `workflows/01-08` 的首轮填充。
-3. 用 `checklists/harness-completeness-checklist.md` 自检。
-4. 通过后再进入代码实现。
+- 本仓库是 Markdown-first 文档项目
+- 不添加程序代码，不创建 CLI，不创建 `src/`
+- 不创建 `package.json`、`tsconfig.json`
+- 新增内容必须服务于 Harness 启动、HITL、模板、清单或示例
+- 示例必须包含：`This is an example harness for demonstration only.`
 
-## 非目标
+## 适用人群
 
-- 不提供 CLI
-- 不提供 Web UI
-- 不提供业务代码
-- 不绑定具体技术栈
+- 需要让 AI 编码“先对齐后执行”的个人开发者
+- 需要跨会话稳定协作的团队
+- 需要降低返工率、提升交接质量的项目负责人
+
+## 许可证
+
+本项目采用 [MIT License](./LICENSE)。
 
