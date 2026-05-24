@@ -5,3 +5,7 @@
 - 禁止修改区域：{{AGENT_FORBIDDEN_AREAS}}
 - 开发前必读：AGENTS.md、product-origin、project-profile、feature-list
 - 开发后必做：更新 progress、session-handoff、verification
+- Sub-agent 规则：
+- 任务下发前必须写明：目标、边界、输入、输出、验收标准。
+- Sub-agent 仅可修改允许修改区域，不得越权。
+- 多个 sub-agent 不可并发修改同一文件，冲突由主 agent 统一处理。
