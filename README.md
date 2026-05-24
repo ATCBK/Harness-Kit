@@ -1,9 +1,20 @@
-﻿# HarnessKit
+﻿<p align="center">
+  <img src="./assets/harnesskit-icon.png" alt="HarnessKit" width="120" />
+</p>
 
-![HarnessKit Icon](./assets/harnesskit-icon.png)
+<h1 align="center">HarnessKit · AI 开发项目 Harness 标准化基座</h1>
 
-**HarnessKit · AI 开发项目的 Harness 标准化基座**  
-让每个项目在编码前先对齐边界、目标、验证与交接。
+<p align="center">
+  <em>让每个项目在编码前先对齐边界、目标、验证与交接</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Format-Markdown--First-0f766e" />
+  <img src="https://img.shields.io/badge/Workflow-HITL_01--08-2563eb" />
+  <img src="https://img.shields.io/badge/Collaboration-Sub--Agent_Rules-b45309" />
+</p>
+
+---
 
 ## 项目愿景
 
@@ -140,4 +151,3 @@ Harness-Kit/
 ## 许可证
 
 本项目采用 [MIT License](./LICENSE)。
-
