@@ -2,10 +2,10 @@
   <img src="./assets/harnesskit-icon.png" alt="HarnessKit" width="120" />
 </p>
 
-<h1 align="center">HarnessKit · AI 开发项目 Harness 标准化基座</h1>
+<h1 align="center">HarnessKit · Harness 工程骨架与 HITL 引导基座</h1>
 
 <p align="center">
-  <em>让每个项目在编码前先对齐边界、目标、验证与交接</em>
+  <em>帮助用户先理清需求，再基于骨架快速构建可执行 Harness 工程</em>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 ## 项目愿景
 
 AI 编码项目常见问题不是“写不出代码”，而是“写了之后不断返工”：上下文缺失、范围漂移、验收模糊、交接断层。  
-HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先对齐再实现”变成可执行流程：从项目原点采集，到范围定义、规则生成、验证设计，再到会话交接与锁定，形成稳定协作闭环。
+HarnessKit 提供一套 Markdown-first 的 Harness 工程骨架与参考体系，把“先对齐再实现”变成可执行流程：通过 HITL 先澄清需求，再按既有骨架填充项目事实，从项目原点采集到范围定义、规则生成、验证设计、会话交接与锁定，形成稳定协作闭环。
 
 ## 核心能力
 
@@ -36,9 +36,9 @@ HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先�
 - 会话交接
 - Harness 锁定
 
-### 2. 多场景 Harness 模板
+### 2. 骨架化目录与参考样例
 
-内置多种项目模板，支持快速复制并按需填充：
+提供骨架目录和参考样例，便于按场景快速填充，而不是绑定固定业务模板：
 
 - `minimal-harness`
 - `ai-agent-project`
@@ -82,7 +82,7 @@ HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先�
 ## 产品亮点
 
 - **Markdown-first**：零平台依赖，任意代码仓可落地
-- **模板 + 流程双驱动**：既有可复制资产，也有执行顺序
+- **骨架 + 流程双驱动**：既有可填充骨架，也有 HITL 执行顺序
 - **未知显式化**：所有未知统一标记 `TODO`，避免伪确定性
 - **可审计协作**：决策、风险、验证、交接全链路可追溯
 - **工具中立**：可用于 Codex / Claude Code / Cursor 等环境
@@ -97,9 +97,9 @@ HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先�
 
 ### 5 分钟上手
 
-1. 选择模板（例如 `templates/minimal-harness/`）。
+1. 选择骨架（例如 `templates/minimal-harness/` 作为起点）。
 2. 复制到目标项目目录（通常为 `ai/`）。
-3. 按 `workflows/01-08` 完成首轮 HITL 访谈并填充 `TODO`。
+3. 按 `workflows/01-08` 完成 HITL 访谈，澄清用户需求后再填充骨架中的 `TODO`。
 4. 开发前必读：`AGENTS.md`、`product-origin.md`、`scope.md`、`feature-list.md`。
 5. 开发后必更：`progress.md`、`verification.md`、`session-handoff.md`。
 
@@ -114,7 +114,7 @@ HarnessKit 提供一套 Markdown-first 的可复用 Harness 体系，把“先�
 
 ## 常见误区
 
-- 只复制模板，不完成 `TODO`
+- 只复制骨架，不完成 `TODO`
 - 只写任务描述，不写验收标准
 - 开发后不更新 `progress` 与 `session-handoff`
 - 在通用模板中写入具体项目事实
@@ -127,9 +127,9 @@ Harness-Kit/
 ├── docs/                         # 概念、原则、指南、路线图
 ├── workflows/                    # 01-08 HITL 访谈流程
 ├── checklists/                   # 启动/开发前后/完整性/防漂移清单
-├── templates/                    # 可复制 Harness 模板
+├── templates/                    # 可复用 Harness 骨架
 ├── examples/                     # 示例 Harness（演示用途）
-├── skill/harnesskit-bootstrap/   # Bootstrap Skill + 模板 + 参考资料
+├── skill/harnesskit-bootstrap/   # Bootstrap Skill + 骨架 + 参考资料
 ├── assets/                       # 视觉资源（项目图标等）
 └── AGENTS.md                     # 仓库级维护规则
 ```
@@ -139,7 +139,7 @@ Harness-Kit/
 - 本仓库是 Markdown-first 文档项目
 - 不添加程序代码，不创建 CLI，不创建 `src/`
 - 不创建 `package.json`、`tsconfig.json`
-- 新增内容必须服务于 Harness 启动、HITL、模板、清单或示例
+- 新增内容必须服务于 Harness 启动、HITL、骨架、清单或示例
 - 示例必须包含：`This is an example harness for demonstration only.`
 
 ## 适用人群
@@ -151,3 +151,4 @@ Harness-Kit/
 ## 许可证
 
 本项目采用 [MIT License](./LICENSE)。
+
